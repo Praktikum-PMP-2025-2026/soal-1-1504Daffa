@@ -3,6 +3,7 @@
 // NIM : 13224068
 // Modul 2 Praktikum Hari Senin 20 April 2026
 #include <stdio.h>
+#include <math.h>
 
 #define MAX 1000
 
@@ -34,7 +35,7 @@ int main() {
             }
 
             if (kiri != -1 && kanan != -1) {
-                arr[i] = (kiri + kanan) / 2;
+                arr[i] = floor((kiri + kanan) / 2);
             } else if (kiri != -1) {
                 arr[i] = kiri;
             } else if (kanan != -1) {
