@@ -2,37 +2,34 @@
 // Nama : Daffa Rafandy Tarigan
 // NIM : 13224068
 // Modul 2 Praktikum Hari Senin 20 April 2026
-
 #include <stdio.h>
+#include <math.h>
 
 #define MAX 1000
 
 int main() {
     int N;
     int arr[MAX];
-    int original[MAX];
 
     scanf("%d", &N);
-
     for (int i = 0; i < N; i++) {
         scanf("%d", &arr[i]);
-        original[i] = arr[i];
     }
 
     for (int i = 0; i < N; i++) {
-        if (original[i] == -1) {
+        if (arr[i] == -1) {
             int kiri = -1, kanan = -1;
 
             for (int j = i - 1; j >= 0; j--) {
-                if (original[j] != -1) {
-                    kiri = original[j];
+                if (arr[j] != -1) {
+                    kiri = arr[j];
                     break;
                 }
             }
-
+                
             for (int j = i + 1; j < N; j++) {
-                if (original[j] != -1) {
-                    kanan = original[j];
+                if (arr[j] != -1) {
+                    kanan = arr[j];
                     break;
                 }
             }
