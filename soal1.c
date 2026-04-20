@@ -10,26 +10,29 @@
 int main() {
     int N;
     int arr[MAX];
+    int original[MAX];
 
     scanf("%d", &N);
+
     for (int i = 0; i < N; i++) {
         scanf("%d", &arr[i]);
+        original[i] = arr[i];
     }
 
     for (int i = 0; i < N; i++) {
-        if (arr[i] == -1) {
+        if (original[i] == -1) {
             int kiri = -1, kanan = -1;
 
             for (int j = i - 1; j >= 0; j--) {
-                if (arr[j] != -1) {
-                    kiri = arr[j];
+                if (original[j] != -1) {
+                    kiri = original[j];
                     break;
                 }
             }
-                
+
             for (int j = i + 1; j < N; j++) {
-                if (arr[j] != -1) {
-                    kanan = arr[j];
+                if (original[j] != -1) {
+                    kanan = original[j];
                     break;
                 }
             }
